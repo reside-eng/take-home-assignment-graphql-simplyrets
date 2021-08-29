@@ -3,9 +3,11 @@ const { listings } = require('../../dto');
 
 const resolvers = {
   Query: {
-    listings: async () => {
+    listings: async (_, args) => {
       logger.info('Listing');
-      const data = await listings.getListings();
+      if (args && Object.keys(args).length) logger.info(args);
+
+      const data = await listings.getListings(args);
       return data;
     }
   }

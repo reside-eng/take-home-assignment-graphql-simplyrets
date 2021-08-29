@@ -9,12 +9,20 @@ const makeListings = properties => {
 
 const listings = {
 
-  // getListings get properties list from api 
+  // getListings get properties listings from api 
   // and convert it to our listings object
-  getListings: async () => {
+  getListings: async (filter) => {
     logger.info('getListings');
     const data = await api.getProperties();
-    return makeListings(data);
+    const listings = makeListings(data);
+
+    if (!filter || !Object.keys(filter).length) return listings;
+
+    // TODO: hardcoded filter options for now 
+    if (filter && filter.city) {
+      return listings.filter(l => l.address?.city === filter.city);
+    }
+    return [];
   },
 };
 
