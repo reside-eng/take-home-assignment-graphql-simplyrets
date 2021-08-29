@@ -1,6 +1,11 @@
 const { gql } = require('apollo-server-express');
-const dummyListings = require('./resolvers/dummyListings');
+
 const server = require('./server');
+const dummyListings = require('./resolvers/dummyListings');
+const { listings } = require('../dto');
+
+
+listings.getListings = jest.fn().mockReturnValue(dummyListings);
 
 const GET_LISTINGS = gql`
   query {
@@ -9,7 +14,6 @@ const GET_LISTINGS = gql`
     }
   }
 `
-
 describe('graphql server', () => {
   it('should get no data with wrong query', async () => {
     const res = await server.executeOperation({query: "wrong"});
@@ -17,7 +21,7 @@ describe('graphql server', () => {
     expect(res?.data).toBeUndefined();
   })
 
-  it('should query properties', async () => {
+  it('should serve listings', async () => {
     const res = await server.executeOperation({query: GET_LISTINGS});
     expect(res?.errors).toBeUndefined();
     expect(res?.data).not.toBeUndefined();

@@ -1,5 +1,8 @@
 const dummyListings = require('./dummyListings');
 const resolvers = require('./resolvers');
+const { listings } = require('../../dto');
+
+listings.getListings = jest.fn().mockReturnValue(dummyListings);
 
 describe('resolvers', () => {
   it('should query listings', async () => {

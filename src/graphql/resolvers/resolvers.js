@@ -1,14 +1,12 @@
 const logger = require('../../logger');
-const dummyListings = require('./dummyListings');
-
-// TODO: dummy data for now
-// get it from api
+const { listings } = require('../../dto');
 
 const resolvers = {
   Query: {
-    listings: () => {
+    listings: async () => {
       logger.info('Listing');
-      return dummyListings;
+      const data = await listings.getListings();
+      return data;
     }
   }
 }
