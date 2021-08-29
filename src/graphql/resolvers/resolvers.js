@@ -1,5 +1,5 @@
 const logger = require('../../logger');
-const dummyListings = require('./dummyListing');
+const dummyListings = require('./dummyListings');
 
 // TODO: dummy data for now
 // get it from api

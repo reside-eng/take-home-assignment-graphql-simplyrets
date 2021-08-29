@@ -1,10 +1,11 @@
 const { gql } = require('apollo-server-express');
+const dummyListings = require('./resolvers/dummyListings');
 const server = require('./server');
 
-const GET_PROPERTIES = gql`
+const GET_LISTINGS = gql`
   query {
-    properties {
-      mlsId
+    listings {
+      listingId
     }
   }
 `
@@ -17,9 +18,10 @@ describe('graphql server', () => {
   })
 
   it('should query properties', async () => {
-    const res = await server.executeOperation({query: GET_PROPERTIES});
-    expect(res?.errors).not.toBeUndefined();
-    expect(res?.data).toBeUndefined();
+    const res = await server.executeOperation({query: GET_LISTINGS});
+    expect(res?.errors).toBeUndefined();
+    expect(res?.data).not.toBeUndefined();
+    expect(res?.data?.listings).toEqual(dummyListings.map(l => ({listingId: l.listingId})));
   })
 
 })

@@ -1,4 +1,4 @@
-const dummyListings = require('./dummyListing');
+const dummyListings = require('./dummyListings');
 const resolvers = require('./resolvers');
 
 describe('resolvers', () => {
