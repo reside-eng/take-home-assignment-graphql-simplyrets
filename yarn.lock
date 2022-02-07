@@ -1278,7 +1278,7 @@ apollo-server-errors@^3.3.1:
   resolved "https://registry.yarnpkg.com/apollo-server-errors/-/apollo-server-errors-3.3.1.tgz#ba5c00cdaa33d4cbd09779f8cb6f47475d1cd655"
   integrity sha512-xnZJ5QWs6FixHICXHxUfm+ZWqqxrNuPlQ+kj5m6RtEgIpekOPssH/SD9gf2B4HuWV0QozorrygwZnux8POvyPA==
 
-apollo-server-express@3.6.2:
+apollo-server-express@3.6.2, apollo-server-express@^3.6.2:
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/apollo-server-express/-/apollo-server-express-3.6.2.tgz#859022b95247e1329e1ed96425c10143598b8fd7"
   integrity sha512-C/guyWmewY/7rjI1Y2Fdpvq0TgF3F/7kTWcGzQhRe/h31ehvFFCeulrmxJ0MEpnIPB3eX7WHS2DZnyuJplsHKQ==
@@ -1310,6 +1310,15 @@ apollo-server-types@^3.5.1:
     apollo-reporting-protobuf "^3.3.0"
     apollo-server-caching "^3.3.0"
     apollo-server-env "^4.2.1"
+
+apollo-server@3.6.2:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/apollo-server/-/apollo-server-3.6.2.tgz#7acf37658a4438a46cf510e026ab82fd354825f9"
+  integrity sha512-siObsC0F1IfZIjhZpRq2TSjNHpEX8Hi1VHZc7gjTifAJ5CH+S0GY5MRt8PjhoxhQq4/0DIlzHEcOofydLnQ0PA==
+  dependencies:
+    apollo-server-core "^3.6.2"
+    apollo-server-express "^3.6.2"
+    express "^4.17.1"
 
 argparse@^1.0.7:
   version "1.0.10"
@@ -1861,7 +1870,7 @@ expect@^27.5.0:
     jest-matcher-utils "^27.5.0"
     jest-message-util "^27.5.0"
 
-express@4.17.2:
+express@4.17.2, express@^4.17.1:
   version "4.17.2"
   resolved "https://registry.yarnpkg.com/express/-/express-4.17.2.tgz#c18369f265297319beed4e5558753cc8c1364cb3"
   integrity sha512-oxlxJxcQlYwqPWKVJJtvQiwHgosH/LrLSPA+H4UxpyvSS6jC5aH+5MoHFM+KABgTOt0APue4w66Ha8jCUo9QGg==
@@ -2022,6 +2031,11 @@ graphql-tag@^2.11.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.11.0.tgz#1deb53a01c46a7eb401d6cb59dec86fa1cccbffd"
   integrity sha512-VmsD5pJqWJnQZMUeRwrDhfgoyqcfwEkvtpANqcoUG8/tOLkwNgU9mzub/Mc78OJMhHjx7gfAMTxzdG43VGg3bA==
+
+graphql@16.3.0:
+  version "16.3.0"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.3.0.tgz#a91e24d10babf9e60c706919bb182b53ccdffc05"
+  integrity sha512-xm+ANmA16BzCT5pLjuXySbQVFwH3oJctUVdy81w1sV0vBU0KgDdBGtxQOUd5zqOBk/JayAFeG8Dlmeq74rjm/A==
 
 has-flag@^3.0.0:
   version "3.0.0"
