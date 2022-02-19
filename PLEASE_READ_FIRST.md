@@ -48,10 +48,11 @@ In this boilerplate, you will find:
 - All the types from the SimplyRETS API ready to use with GraphQL: `types/index.js`
 - A `README.md` file to document your comments and design decisions
 - Inside the `package.json`, we added the following packages:
-    - `express`
-    - `apollo-server-express`
+    - `apollo-server`
+    - `graphql`
     - `jest`
-    
+- A `renovate.json` file - you can ignore this, it is just settings for a tool we use to keep dependencies up to date in the assignment
+
 ## SimplyRETS API
 
 SimplyRETS is a platform for developers and agents to build real estate applications and websites.
