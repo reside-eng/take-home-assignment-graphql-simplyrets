@@ -1,6 +1,4 @@
-import * as dotenv from "dotenv";
-dotenv.config();
-
+import "dotenv/config";
 import start from "./start";
 
 /** Main function that initializes the server and is invoked by the 'start' script from package.json */

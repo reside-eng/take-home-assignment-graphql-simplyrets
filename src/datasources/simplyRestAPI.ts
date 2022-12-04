@@ -7,8 +7,8 @@ import { Property } from "../types/generated";
 const simplyRestAPI = axios.create({
   baseURL: "https://api.simplyrets.com",
   auth: {
-    username: process.env.SIMPLY_RETS_USERNAME || "simplyrets",
-    password: process.env.SIMPLY_RETS_PWD || "simplyrets",
+    username: process.env.SIMPLY_RETS_USERNAME,
+    password: process.env.SIMPLY_RETS_PWD,
   },
 });
 
