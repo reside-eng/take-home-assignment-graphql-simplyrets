@@ -9,13 +9,16 @@
   "type": "module",
   "scripts": {
     "compile": "tsc",
+    "dev": "tsc-watch --onSuccess \"npm run start:server\"",
+    "generate": "graphql-codegen --config codegen.yml",
+    "format": "prettier --write src",
+    "lint": "tslint src/**/*.ts",
+    "pretest": "npm run lint",
     "test": "jest",
     "test:update": "jest -u",
-    "test:watch": "jest -watch",
-    "start": "npm run compile && node --es-module-specifier-resolution=node ./dist/index.js",
-    "dev": "tsc-watch --onSuccess \"node --es-module-specifier-resolution=node ./dist/index.js\"",
-    "generate": "graphql-codegen --config codegen.yml",
-    "format": "prettier --write src"
+    "test:watch": "jest --watch",
+    "start": "npm run compile && npm run start:server",
+    "start:server": "node --es-module-specifier-resolution=node ./dist/index.js"
   },
   "dependencies": {
     "@apollo/server": "^4.2.2",
