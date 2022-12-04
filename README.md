@@ -33,7 +33,7 @@ Please document your code & design decisions here.
 ## Env variables
 
 The code is using `dotenv` so it requires a .env file in the root folder with the following variables (as mentioned in the [PLEASE_READ_FIRST.md](PLEASE_READ_FIRST.md)). 
-
+ 
 ```
 SIMPLY_RETS_USERNAME=simplyrets
 SIMPLY_RETS_PWD=simplyrets
